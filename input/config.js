@@ -123,11 +123,11 @@ const height = 1000
 // description for NFT in metadata file
 const description = "Moralis Mutants - A new generation of mutants"
 // base url in case no unique metadata file i.e IPFS
-const baseImageUri = "https://eliashezron.io"
+const baseImageUri = "https://github.com/eliashezron/"
 // id for edition to start from
 const startEditionFrom = 1
 // amount of NFTs to generate in edition
-const editionSize = 12
+const editionSize = 6
 // prefix to add to edition dna ids (to distinguish dna counts from different generation processes for the same collection)
 const editionDnaPrefix = 0
 
