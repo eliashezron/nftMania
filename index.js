@@ -30,8 +30,8 @@ const canvas = createCanvas(width, height)
 const ctx = canvas.getContext("2d")
 
 // Moralis creds
-const serverUrl = "https://5zenrjqoogkm.usemoralis.com:2053/server"
-const appId = "fpV6gOf2DBVPelzeXHevT0gO8S0bDMa6zDmWupPm"
+const serverUrl = "https://2hc4m4ntoiyk.usemoralis.com:2053/server"
+const appId = "UJ4SnZjLeqWXOAXqlxMZadc5ASkQmQSJBysc06Nq"
 const masterKey = "Xj6taZp6oVxUJOKmA04VjhbnA2i2CLNJlUZZrXyH"
 const apiUrl = "https://deep-index.moralis.io/api/v2/ipfs/uploadFolder"
 // xAPIKey available here: https://deep-index.moralis.io/api-docs/#/storage/uploadFolder
