@@ -121,7 +121,7 @@ const width = 1000
 // image height in pixels
 const height = 1000
 // description for NFT in metadata file
-const description = "Moralis Mutants - A new generation of mutants"
+const description = "nft mania mutants"
 // base url in case no unique metadata file i.e IPFS
 const baseImageUri = "https://github.com/eliashezron/"
 // id for edition to start from

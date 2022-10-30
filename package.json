@@ -6,14 +6,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Daniel Eugene Botha",
+  "author": "elias hezron",
   "license": "ISC",
   "dependencies": {
     "all": "^0.0.0",
-    "axios": "^0.23.0",
     "canvas": "^2.8.0",
     "dotenv": "^10.0.0",
+    "files-from-path": "^0.2.6",
+    "mime": "^3.0.0",
     "moralis": "^0.0.104",
+    "nft.storage": "^7.0.0",
     "request": "^2.88.2"
   }
 }

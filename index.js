@@ -1,10 +1,14 @@
 // import dependencies
 const console = require("console")
 const dotenv = require("dotenv")
+const mime = require("mime")
 dotenv.config() // setup dotenv
-
-// utilise Moralis
-const Moralis = require("moralis/node")
+const {
+  createMetadata,
+  uploadImages,
+  compileMetadata,
+  compileData,
+} = require("./src/createMetadata")
 
 // canvas for image compile
 const { createCanvas } = require("canvas")
@@ -20,7 +24,7 @@ const {
 } = require("./input/config.js")
 
 // import metadata
-const { compileMetadata } = require("./src/metadata")
+// const { compileMetadata } = require("./src/metadata")
 
 // import for saving files
 const { createFile } = require("./src/filesystem")
@@ -28,18 +32,6 @@ const { createFile } = require("./src/filesystem")
 // setup canvas
 const canvas = createCanvas(width, height)
 const ctx = canvas.getContext("2d")
-
-// Moralis creds
-const serverUrl = "https://2hc4m4ntoiyk.usemoralis.com:2053/server"
-const appId = "UJ4SnZjLeqWXOAXqlxMZadc5ASkQmQSJBysc06Nq"
-const masterKey = "Xj6taZp6oVxUJOKmA04VjhbnA2i2CLNJlUZZrXyH"
-const apiUrl = "https://deep-index.moralis.io/api/v2/ipfs/uploadFolder"
-// xAPIKey available here: https://deep-index.moralis.io/api-docs/#/storage/uploadFolder
-const apiKey =
-  "bTyKM0ql1TTNZzVFbIG9VfCOv0w1SX3Bwz9PCm31yTwqnCo7d7MqUj6EeuuONtnX"
-
-// Start Moralis session
-Moralis.start({ serverUrl, appId, masterKey })
 
 // Create generative art by using the canvas api
 const startCreating = async () => {
@@ -77,18 +69,11 @@ const startCreating = async () => {
     // iterate
     editionCount++
   }
-
-  await compileMetadata(
-    apiUrl,
-    apiKey,
-    editionCount,
-    editionSize,
-    imageDataArray
-  )
+  await compileData(editionSize, imageDataArray)
 
   console.log()
   console.log("#########################################")
-  console.log("Welcome to Rekt City - Meet the Survivors")
+  console.log("Welcome to NFT MANIA - Meet the ARTISTS")
   console.log("#########################################")
   console.log()
 }
