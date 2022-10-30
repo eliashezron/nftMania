@@ -108,5 +108,6 @@ dist
 # Misc
 .DS_Store
 
-output/
-demo/
+output
+app
+client
